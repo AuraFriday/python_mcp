@@ -162,6 +162,329 @@ All in one execution. All locally. All with unlimited data processing capacity.
 
 ---
 
+## 🎯 What Your AI Can Actually Control (Products & APIs)
+
+**The Python tool isn't just for data processing - it's your gateway to controlling hundreds of desktop applications and services.**
+
+When you ask your AI to "automate Excel" or "control Photoshop," it needs to know that the **Python tool** is the right choice. This table shows exactly which products your AI can control through Python APIs, COM/ActiveX, and scripting interfaces.
+
+### 🏢 Microsoft Office & Productivity
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **Excel** | `win32com.client` (COM) | Create workbooks, manipulate cells, formulas, charts, pivot tables | `excel = win32com.client.Dispatch('Excel.Application')` |
+| **Word** | `win32com.client` (COM) | Document creation, formatting, mail merge, content manipulation | `word = win32com.client.Dispatch('Word.Application')` |
+| **PowerPoint** | `win32com.client` (COM) | Slide creation, formatting, animations, presentations | `ppt = win32com.client.Dispatch('PowerPoint.Application')` |
+| **Outlook** | `win32com.client` (COM) | Email sending, calendar management, contacts, tasks | `outlook = win32com.client.Dispatch('Outlook.Application')` |
+| **Access** | `win32com.client` (COM) | Database queries, report generation, form automation | `access = win32com.client.Dispatch('Access.Application')` |
+| **Visio** | `win32com.client` (COM) | Diagram creation, shape manipulation, flowcharts | `visio = win32com.client.Dispatch('Visio.Application')` |
+| **Project** | `win32com.client` (COM) | Project management, task scheduling, resource allocation | `project = win32com.client.Dispatch('MSProject.Application')` |
+| **OneNote** | `win32com.client` (COM) | Note creation, section management, content extraction | `onenote = win32com.client.Dispatch('OneNote.Application')` |
+
+**Example**: "Create Excel report with sales data" → Python uses `win32com` to automate Excel, populate cells, create charts
+
+### 🎨 CAD & 3D Design
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **AutoCAD** | `win32com.client` (COM) | Drawing automation, entity creation, layer management, plotting | `acad = win32com.client.Dispatch('AutoCAD.Application')` |
+| **Inventor** | `win32com.client` (COM) | Part modeling, assembly creation, drawing generation | `inventor = win32com.client.Dispatch('Inventor.Application')` |
+| **SolidWorks** | `win32com.client` (COM) | Part/assembly modeling, feature creation, simulation | `sw = win32com.client.Dispatch('SldWorks.Application')` |
+| **Rhino 3D** | `rhinoscriptsyntax`, `Rhino.Python` | Geometry creation, NURBS modeling, mesh operations | `import rhinoscriptsyntax as rs` |
+| **FreeCAD** | `FreeCAD` module | Parametric modeling, scripting, automation | `import FreeCAD` |
+| **Blender** | `bpy` module | 3D modeling, animation, rendering, compositing | `import bpy` |
+| **SketchUp** | Ruby API (via subprocess) | Model creation, component management | Via Ruby scripts |
+| **Fusion 360** | `adsk.core`, `adsk.fusion` | Cloud CAD automation, parametric modeling | Fusion API |
+
+**Example**: "Draw a circle in AutoCAD" → Python uses COM to access AutoCAD's object model, creates circle entity
+
+### 🎬 Adobe Creative Suite
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **Photoshop** | `win32com.client` + JSX | Image manipulation, batch processing, layer operations | COM + ExtendScript bridge |
+| **Illustrator** | `win32com.client` + JSX | Vector graphics, path manipulation, text operations | COM + ExtendScript bridge |
+| **After Effects** | `win32com.client` + JSX | Composition creation, animation, rendering | COM + ExtendScript bridge |
+| **Premiere Pro** | `win32com.client` + JSX | Video editing, sequence manipulation, export | COM + ExtendScript bridge |
+| **InDesign** | `win32com.client` + JSX | Page layout, text formatting, document generation | COM + ExtendScript bridge |
+| **Acrobat** | `win32com.client` (COM) | PDF manipulation, form filling, annotation | `acrobat = win32com.client.Dispatch('AcroExch.App')` |
+
+**Example**: "Batch resize images in Photoshop" → Python uses COM to execute ExtendScript (JSX) in Photoshop
+
+### 🎥 Video & Animation Software
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **DaVinci Resolve** | `DaVinciResolveScript` | Timeline editing, color grading, rendering, project management | `resolve = dvr_script.scriptapp("Resolve")` |
+| **Nuke** | `nuke` module | Compositing, node graph manipulation, rendering | `import nuke` |
+| **Houdini** | `hou` module | Procedural modeling, VFX, simulation, rendering | `import hou` |
+| **Cinema 4D** | `c4d` module | 3D modeling, animation, rendering | `import c4d` |
+| **Maya** | `maya.cmds`, `maya.mel` | 3D animation, rigging, simulation, rendering | `from maya import cmds` |
+| **3ds Max** | `pymxs` | 3D modeling, animation, rendering | `import pymxs` |
+| **Unreal Engine** | `unreal` module | Level editing, blueprint automation, rendering | `import unreal` |
+
+**Example**: "Automate Resolve timeline" → Python uses DaVinci Resolve API to create timeline, add clips, apply grades
+
+### 🎵 Music Production (DAWs)
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **Ableton Live** | `python-osc` (OSC protocol) | Track control, clip launching, parameter automation | `from pythonosc import udp_client` |
+| **Reaper** | `reapy` | Full DAW automation, plugin control, rendering | `import reapy` |
+| **FL Studio** | `flpianoroll` (limited) | MIDI manipulation, pattern editing | Limited API |
+
+**Example**: "Set Ableton tempo" → Python sends OSC message to Ableton Live's OSC server
+
+### 🗄️ Databases (Native Clients)
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **PostgreSQL** | `psycopg2`, `asyncpg` | SQL queries, transactions, bulk operations | `import psycopg2` |
+| **MySQL/MariaDB** | `mysql-connector-python`, `PyMySQL` | SQL queries, database management | `import mysql.connector` |
+| **SQL Server** | `pyodbc`, `pymssql` | SQL queries, stored procedures | `import pyodbc` |
+| **Oracle** | `cx_Oracle` | SQL queries, PL/SQL execution | `import cx_Oracle` |
+| **SQLite** | `sqlite3` (built-in) | Local database operations | `import sqlite3` |
+| **MongoDB** | `pymongo` | NoSQL operations, document queries | `from pymongo import MongoClient` |
+| **Redis** | `redis-py` | Key-value operations, pub/sub, caching | `import redis` |
+| **Elasticsearch** | `elasticsearch-py` | Search queries, indexing, analytics | `from elasticsearch import Elasticsearch` |
+| **Cassandra** | `cassandra-driver` | Distributed database operations | `from cassandra.cluster import Cluster` |
+
+**Example**: "Query PostgreSQL database" → Python uses `psycopg2` to connect and execute SQL
+
+### 📊 Data Science & Analytics
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **Jupyter** | `nbformat`, `nbconvert` | Notebook manipulation, execution, conversion | `import nbformat` |
+| **Tableau** | `tableauserverclient` | Dashboard publishing, data source management | `import tableauserverclient` |
+| **Power BI** | `msal` + REST API | Report publishing, dataset refresh | Via REST API |
+| **MATLAB** | `matlab.engine` | MATLAB script execution from Python | `import matlab.engine` |
+| **R** | `rpy2` | R script execution from Python | `import rpy2.robjects as ro` |
+| **SPSS** | `savReaderWriter` | SPSS file manipulation | `from savReaderWriter import *` |
+
+**Example**: "Execute MATLAB code" → Python uses `matlab.engine` to start MATLAB and run scripts
+
+### 🎮 Game Engines & Development
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **Unity** | `UnityPython` (limited) | Editor scripting, build automation | Limited support |
+| **Unreal Engine** | `unreal` module | Editor automation, blueprint scripting | `import unreal` |
+| **Godot** | `gdscript` (via subprocess) | Scene manipulation, build automation | Via GDScript |
+| **GameMaker** | GML (via subprocess) | Limited automation via command line | Via GML scripts |
+
+**Example**: "Automate Unreal build" → Python uses `unreal` module to trigger builds, package projects
+
+### 🔬 Scientific Instruments & Lab Equipment
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **LabVIEW** | `pyvisa`, COM | Instrument control, data acquisition | `import pyvisa` |
+| **National Instruments** | `nidaqmx` | DAQ control, signal generation | `import nidaqmx` |
+| **Keysight Instruments** | `pyvisa` | Oscilloscopes, signal generators, multimeters | SCPI over VISA |
+| **Tektronix** | `pyvisa` | Oscilloscope control, waveform capture | SCPI over VISA |
+| **Agilent** | `pyvisa` | Test equipment control | SCPI over VISA |
+
+**Example**: "Read oscilloscope" → Python uses `pyvisa` to send SCPI commands to instrument
+
+### 🌐 Web Services & APIs
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **Salesforce** | `simple-salesforce` | CRM operations, data queries | `from simple_salesforce import Salesforce` |
+| **ServiceNow** | `pysnow` | Ticket management, workflow automation | `import pysnow` |
+| **Jira** | `jira` | Issue tracking, project management | `from jira import JIRA` |
+| **Confluence** | `atlassian-python-api` | Wiki page management, content creation | `from atlassian import Confluence` |
+| **SharePoint** | `Office365-REST-Python-Client` | Document management, list operations | `from office365.sharepoint.client_context import ClientContext` |
+| **Slack** | `slack-sdk` | Messaging, channel management, bot control | `from slack_sdk import WebClient` |
+| **Discord** | `discord.py` | Bot creation, server management | `import discord` |
+| **Telegram** | `python-telegram-bot` | Bot automation, message handling | `from telegram import Bot` |
+| **Twitter/X** | `tweepy` | Tweet posting, timeline reading, DM automation | `import tweepy` |
+| **GitHub** | `PyGithub` | Repository management, issue tracking, CI/CD | `from github import Github` |
+| **GitLab** | `python-gitlab` | Project management, pipeline control | `import gitlab` |
+
+**Example**: "Create Jira ticket" → Python uses `jira` library to authenticate and create issue
+
+### 🖥️ Windows System Automation
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **Windows Management** | `wmi` | System info, process management, service control | `import wmi` |
+| **Active Directory** | `pyad`, `ldap3` | User management, group operations, queries | `from pyad import aduser` |
+| **Windows Registry** | `winreg` (built-in) | Registry read/write operations | `import winreg` |
+| **Windows Services** | `win32service` | Service start/stop, status queries | `import win32service` |
+| **Task Scheduler** | `win32com.client` (COM) | Scheduled task creation, management | `schedule = win32com.client.Dispatch('Schedule.Service')` |
+| **Event Log** | `win32evtlog` | Event log reading, filtering | `import win32evtlog` |
+| **PowerShell** | `subprocess` + PowerShell | Execute PowerShell scripts from Python | `subprocess.run(['powershell', '-Command', '...'])` |
+
+**Example**: "Query Active Directory" → Python uses `pyad` to search for users, groups, computers
+
+### 📧 Email Clients & Services
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **SMTP Servers** | `smtplib` (built-in) | Email sending | `import smtplib` |
+| **IMAP Servers** | `imaplib` (built-in) | Email reading, folder management | `import imaplib` |
+| **POP3 Servers** | `poplib` (built-in) | Email downloading | `import poplib` |
+| **Gmail API** | `google-api-python-client` | Gmail automation, label management | `from googleapiclient.discovery import build` |
+| **Exchange** | `exchangelib` | Exchange server operations | `from exchangelib import Account` |
+| **Mailchimp** | `mailchimp3` | Email campaign management | `from mailchimp3 import MailChimp` |
+
+**Example**: "Read emails via IMAP" → Python uses `imaplib` to connect and fetch messages
+
+### 🔧 Development Tools & IDEs
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **VS Code** | REST API | Extension control, debugging | Via HTTP API |
+| **JetBrains IDEs** | Plugin API | Limited automation via plugins | Via plugin system |
+| **Sublime Text** | Plugin API | Text manipulation, build systems | Via Python plugins |
+| **Vim/Neovim** | `pynvim` | Editor automation, plugin development | `import pynvim` |
+
+**Example**: "Control VS Code" → Python sends HTTP requests to VS Code's REST API
+
+### 🎨 Graphics & Image Processing
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **PIL/Pillow** | `PIL`, `pillow` | Image manipulation, format conversion, filters | `from PIL import Image` |
+| **OpenCV** | `cv2` | Computer vision, image processing, video analysis | `import cv2` |
+| **scikit-image** | `skimage` | Scientific image processing, segmentation | `from skimage import filters` |
+| **ImageMagick** | `Wand` | Advanced image manipulation via ImageMagick | `from wand.image import Image` |
+| **GIMP** | `gimpfu` (via subprocess) | Batch image processing, scripting | Via Python-Fu scripts |
+
+**Example**: "Batch resize images" → Python uses Pillow to process directory of images
+
+### 🔬 Scientific Computing
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **NumPy** | `numpy` | Array operations, linear algebra, FFT | `import numpy as np` |
+| **SciPy** | `scipy` | Scientific computing, optimization, signal processing | `import scipy` |
+| **Pandas** | `pandas` | Data analysis, CSV/Excel processing, time series | `import pandas as pd` |
+| **Matplotlib** | `matplotlib` | Data visualization, plotting, charts | `import matplotlib.pyplot as plt` |
+| **Seaborn** | `seaborn` | Statistical visualization | `import seaborn as sns` |
+| **Plotly** | `plotly` | Interactive visualizations, dashboards | `import plotly.graph_objects as go` |
+| **SymPy** | `sympy` | Symbolic mathematics, calculus, algebra | `import sympy` |
+| **NetworkX** | `networkx` | Graph theory, network analysis | `import networkx as nx` |
+
+**Example**: "Analyze CSV data" → Python uses Pandas to load, process, and visualize data
+
+### 🤖 Machine Learning & AI
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **TensorFlow** | `tensorflow` | Deep learning, neural networks, training | `import tensorflow as tf` |
+| **PyTorch** | `torch` | Deep learning, research, model training | `import torch` |
+| **scikit-learn** | `sklearn` | Machine learning, classification, clustering | `from sklearn import svm` |
+| **Keras** | `keras` | High-level neural networks | `from keras.models import Sequential` |
+| **Hugging Face** | `transformers` | NLP, pre-trained models, fine-tuning | `from transformers import pipeline` |
+| **OpenAI API** | `openai` | GPT models, embeddings, completions | `import openai` |
+| **LangChain** | `langchain` | LLM orchestration, chains, agents | `from langchain import OpenAI` |
+| **spaCy** | `spacy` | NLP, entity recognition, text processing | `import spacy` |
+
+**Example**: "Classify text with ML" → Python uses scikit-learn to train and predict
+
+### 🌐 Cloud Services & APIs
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **AWS (Boto3)** | `boto3` | EC2, S3, Lambda, all AWS services | `import boto3` |
+| **Azure SDK** | `azure-*` packages | Azure services, storage, compute | `from azure.storage.blob import BlobServiceClient` |
+| **Google Cloud** | `google-cloud-*` | GCP services, storage, compute | `from google.cloud import storage` |
+| **DigitalOcean** | `python-digitalocean` | Droplet management, networking | `import digitalocean` |
+| **Linode** | `linode-api4` | Server management, networking | `from linode_api4 import LinodeClient` |
+| **Heroku** | `heroku3` | App deployment, dyno management | `import heroku3` |
+| **Cloudflare** | `cloudflare` | DNS, CDN, Workers, security | `import CloudFlare` |
+
+**Example**: "Upload to S3" → Python uses `boto3` to upload files to AWS S3 bucket
+
+### 📱 Mobile Device Control
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **Android (ADB)** | `adb-shell`, `pure-python-adb` | App installation, shell commands, file transfer | `from adb_shell.adb_device import AdbDeviceTcp` |
+| **iOS (libimobiledevice)** | `pymobiledevice3` | App management, file access, diagnostics | `from pymobiledevice3 import usbmux` |
+| **Appium** | `Appium-Python-Client` | Mobile app automation, testing | `from appium import webdriver` |
+
+**Example**: "Install APK on Android" → Python uses ADB library to push and install app
+
+### 🎯 Testing & Quality Assurance
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **Selenium** | `selenium` | Web browser automation, testing | `from selenium import webdriver` |
+| **Playwright** | `playwright` | Modern browser automation | `from playwright.sync_api import sync_playwright` |
+| **Requests** | `requests` | HTTP API testing, web scraping | `import requests` |
+| **pytest** | `pytest` | Test framework, fixtures, assertions | `import pytest` |
+| **unittest** | `unittest` (built-in) | Unit testing framework | `import unittest` |
+| **Locust** | `locust` | Load testing, performance testing | `from locust import HttpUser` |
+
+**Example**: "Run automated tests" → Python executes pytest test suite
+
+### 📊 Business Intelligence & Reporting
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **Tableau** | `tableauserverclient` | Report publishing, data refresh | `import tableauserverclient as TSC` |
+| **Power BI** | `msal` + REST | Dataset refresh, report publishing | Via REST API |
+| **Looker** | `looker-sdk` | Dashboard management, queries | `import looker_sdk` |
+| **Metabase** | HTTP REST | Dashboard creation, queries | Via HTTP API |
+| **Apache Superset** | REST API | Dashboard management, SQL queries | Via HTTP API |
+
+**Example**: "Refresh Tableau dashboard" → Python uses Tableau SDK to trigger data refresh
+
+### 🎬 Video Processing & Transcoding
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **FFmpeg** | `ffmpeg-python` | Video transcoding, streaming, editing | `import ffmpeg` |
+| **MoviePy** | `moviepy` | Video editing, effects, composition | `from moviepy.editor import VideoFileClip` |
+| **OpenCV** | `cv2` | Video processing, frame extraction, analysis | `import cv2` |
+| **PyAV** | `av` | Low-level video/audio processing | `import av` |
+
+**Example**: "Extract video frames" → Python uses OpenCV to read video and save frames
+
+### 🗺️ GIS & Mapping
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **ArcGIS** | `arcpy` | GIS analysis, map automation, spatial queries | `import arcpy` |
+| **QGIS** | `qgis.core` | GIS processing, map generation | `from qgis.core import QgsApplication` |
+| **GeoPandas** | `geopandas` | Geospatial data analysis | `import geopandas as gpd` |
+| **Folium** | `folium` | Interactive map generation | `import folium` |
+| **Shapely** | `shapely` | Geometric operations, spatial analysis | `from shapely.geometry import Point` |
+
+**Example**: "Analyze geographic data" → Python uses GeoPandas to process shapefiles
+
+### 🔐 Cryptography & Security
+
+| Product | Python Library | What You Can Do | Example |
+|---------|----------------|-----------------|---------|
+| **OpenSSL** | `pyOpenSSL` | Certificate management, encryption | `from OpenSSL import SSL` |
+| **Cryptography** | `cryptography` | Encryption, signing, key management | `from cryptography.fernet import Fernet` |
+| **PyCrypto** | `Crypto` | Legacy encryption, hashing | `from Crypto.Cipher import AES` |
+| **Paramiko** | `paramiko` | SSH client, SFTP, key management | `import paramiko` |
+| **Scapy** | `scapy` | Packet crafting, network security testing | `from scapy.all import *` |
+
+**Example**: "Generate SSL certificate" → Python uses pyOpenSSL to create and sign certificates
+
+---
+
+## 📡 For Network Protocol Products
+
+Many products are better controlled through **raw network protocols** rather than Python libraries. See the `terminal` tool documentation for products like:
+- **OBS Studio, vMix** (WebSocket/HTTP)
+- **CNC Mills, 3D Printers** (Serial/G-code)
+- **PLCs, Industrial Controllers** (Modbus, OPC UA)
+- **Smart Home Devices** (MQTT, HTTP)
+- **Databases** (Native wire protocols)
+- **And hundreds more...**
+
+The `terminal` tool lets your AI connect directly to these services via TCP, UDP, Serial, WebSocket, and more!
+
+---
+
 ## Real-World Story: The Data Pipeline Nightmare
 
 **The Problem:**

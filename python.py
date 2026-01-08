@@ -9,9 +9,9 @@ Allows AI agents to run Python scripts, save/load code files, and use Python as 
 between other MCP tools for data processing and automation tasks.
 
 Copyright: © 2025 Christopher Nathan Drake. All rights reserved.
-SPDX-License-Identifier: Apache-2.0
-"signature": "MАSjɅꓝƍƧĵⲞAYոꓮXɊΚTɋqPqƌɪᎻꓝ𝟩ωМɗj𝟥ꓳďnyꓴfᒿЈPꓰᎠ6ĸбꓖ𝟟ʌᎠꓳΤƵʈꙅΥīCΜmƬnTƛᗅꓝᒿЅSΥᴡАꓧƼER50ꙅ𐐕ɋƛΜƊ8ƙƦⅮsQ𝟤bΤƘꓦƼAcԁɌᛕƘꓴwųꓓƖƤȣ"
-"signdate": "2025-12-02T04:22:31.875Z",
+SPDX-License-Identifier: Proprietary
+"signature": "οᎬƧеΟƤȠʌ𝟚HꓜⅮ𝟣CQŧ𝕌еkΚбΜⲟМ𝟧VĵᗞƎHꓑĸ𝙰ОɋЕƤμþlƿȜꓳƲƎΒτυųΥƻ𐓒τ𝟙ϹꓔⲟN𝟫ոOwᏟbfꓧƿȠⲦǝᏟDƵᴠꓪхƦʋyɅɋuƏƻꓖKυԛᴍᛕZ3qⅮƋȢꓜК4dꓟᏎfxOBPȣE"
+"signdate": "2025-11-19T00:51:59.840Z",
 """
 
 import json
